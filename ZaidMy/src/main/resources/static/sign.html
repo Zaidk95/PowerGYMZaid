@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        if( window.localStorage.getItem("myBat") != "null" ){
+            window.location.replace('MyWeb.html');
+        }
+        </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login / Sign Up Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="./src/main.css">
+    <style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom:20px;
+}
+
+.cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background: #5CAB7D;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  span {
+    transform: skewX(15deg) 
+  }
+
+  span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+/**************SVG****************/
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <span id="span"></span>
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email or Special" id="email">
+            </div>
+            <div class="form__input-group" style="position: relative;">
+                <input type="password" class="form__input" autofocus placeholder="Password" id="password">
+                <i class="far fa-eye eye" id="togglePassword3"></i>
+            </div>
+<div class="wrapper" style="cursor:pointer;padding:15px;" onclick="todo2();">
+      <a class="cta">
+        <span>NEXT</span>
+        <span>
+          <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+            </g>
+          </svg>
+        </span> 
+      </a>
+    </div>            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create Account</h1>
+            <div class="form__input-group">
+                <input type="text" id="f1" class="form__input" autofocus placeholder="Username">
+            </div>
+            <div class="form__input-group">
+                <input id="f2" type="date" class="form__input" autofocus placeholder="Birth Date">
+            </div>
+            <div class="form__input-group">
+                <input id="f3" type="text" class="form__input" autofocus placeholder="Email Address">
+            </div>
+            <div class="form__input-group" style="position: relative;">
+                <input id="f4" type="password" class="form__input" autofocus placeholder="Password" onkeyup="checkpassword();">
+                <i class="far fa-eye eye" id="togglePassword"></i>
+            </div>
+            <div class="progress" style="margin:10px;margin-bottom: 15px;">
+                <div id="pg" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="form__input-group" style="position: relative;">
+                <input id="f5" type="password" class="form__input" autofocus placeholder="Confirm password" id="ps2">
+                <i class="far fa-eye eye" id="togglePassword2"></i>
+            </div>
+
+            <div style="display:flex;margin-left:17px;">
+  <label class="rad-label">
+    <input type="radio" class="rad-input" name="rad" id="option-1">
+    <div class="rad-design"></div>
+    <div class="rad-text">Male</div>
+  </label>
+
+  <label class="rad-label">
+    <input type="radio" class="rad-input" name="rad" id="option-2">
+    <div class="rad-design"></div>
+    <div class="rad-text">Female</div>
+  </label>
+  </div>
+            <!--  <button style="margin:25px 0;margin-top: 10px;" class="form__button" type="button" id="btn">Sign Up</button>-->
+            <div class="wrapper" id="btn" style="cursor:pointer;">
+      <a class="cta">
+        <span>NEXT</span>
+        <span>
+          <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+            </g>
+          </svg>
+        </span> 
+      </a>
+    </div>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+    <script src="./src/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+function loginn(){
+  var check_res;
+  var query = new Object();
+  var a = document.getElementById("email").value;
+  var b = document.getElementById("password").value;
+  $.ajax({ 
+      async:false,
+      url:"/send/"+a+"/"+b,
+      data:query,
+      type: "POST",
+      dataType: "json",
+      success: function(result){
+          check_res=result;
+      },error:function(){}
+  });
+  return check_res;    
+}
+
+function getId1(){
+  var check_res;
+  var query = new Object();
+  var x = document.getElementById("email").value;
+  $.ajax({ 
+      async:false,
+      url:"/getidi/em?em="+x,
+      data:query,
+      type: "POST",
+      dataType: "json",
+      success: function(result){
+          check_res=result;
+      },error:function(){}
+  });
+  return check_res;  
+}
+function getId2(){
+  var check_res;
+  var query = new Object();
+  var x = document.getElementById("email").value;
+  $.ajax({ 
+      async:false,
+      url:"/getide/em?em="+x,
+      data:query,
+      type: "POST",
+      dataType: "json",
+      success: function(result){
+          check_res=result;
+      },error:function(){}
+  });
+  return check_res;  
+}
+
+function todo2(){
+  if (loginn() === true){
+      //var xx = getId2();
+      //location.replace("http://localhost:8080/course.html?id="+xx);
+      if(isNaN(document.getElementById("email").value) === false){
+          var a = getId1();
+      }
+      else {
+          var a = getId2();
+      }
+      
+      window.localStorage.setItem("myCat", a);
+      window.localStorage.setItem("myBat", "true");
+      window.location.reload(); 
+      
+  }
+  else {
+      if(document.getElementById("email").value.length < 1 && document.getElementById("password").value.length < 1){
+        document.getElementById('span').remove();
+        document.getElementById('email').style.border = "2px solid #cc3333";
+            document.getElementById('password').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Please , Fill the blanks to sign in !!';
+            $(div).insertAfter( $( "#password" ) );
+      }
+      else if(isNaN(document.getElementById("email").value) === true){
+          if(Check_Exist1() === false){
+            document.getElementById('span').remove();
+            document.getElementById('email').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This Email is Not Exist , Go And Sign Up!';
+            $(div).insertAfter( $( "#email" ) );
+            document.getElementById('password').setAttribute("style" , "border:1px solid #009579;");
+          }
+          else {
+            document.getElementById('span').remove();
+            document.getElementById('password').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This Password Is Wrong , Try Again!';
+            $(div).insertAfter( $( "#password" ) );
+          }
+      }
+      else {
+          if(Check_Id1() === false){
+            document.getElementById('span').remove();
+            document.getElementById('email').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This Special Id is Not Exist , Go And Sign Up To get one!';
+            $(div).insertAfter( $( "#email" ) );
+            document.getElementById('password').setAttribute("style" , "border:1px solid #009579;");
+          }
+          else {
+            document.getElementById('span').remove();
+            document.getElementById('password').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This Password Is Wrong , Try Again!';
+            $(div).insertAfter( $( "#password" ) );
+          }
+      }
+      
+  }
+}
+
+</script>
+        <script type="text/javascript">
+        function Check_Exist1(){
+             var check_res;
+             var query = new Object();
+             $.ajax({ 
+                 async:false,
+                 url: "/admin/va/email?email="+(document.getElementById("email").value),
+                 data:query,
+                 type: "POST",
+                 dataType: "json",
+                 success: function(result){
+                     check_res=result;
+                 },error:function(){}
+             });
+             return check_res;    
+         }
+        function Check_Id1(){
+               var check_res;
+               var query = new Object();// ?q=ddsd&
+               $.ajax({ 
+                   async:false,
+                   url: "/admin/id/id?id="+(document.getElementById("email").value),
+                   data:query,
+                   type: "POST",
+                   dataType: "json",
+                   success: function(result){
+                       check_res=result;
+                   },error:function(){}
+               });
+               return check_res;    
+           }
+        </script>
+
+    <!--This 
+        
+        
+        for sign up-->
+    <script>
+
+        const bar= document.getElementById("pg");
+            function checkpassword()
+            {
+            let r = pass();
+            if(r == 0){
+                bar.style.width = "0%";
+            }
+            if(r == 1){
+                $(bar).removeClass();
+                bar.classList.add('bg-danger' , 'progress-bar' , 'progress-bar-striped' , 'progress-bar-animated');
+                bar.style.width = "25%";
+            }
+            if(r == 1 && document.getElementById("f4").value.length >= 1 && document.getElementById("f4").value.length <= 5){
+                $(bar).removeClass();
+                bar.classList.add('bg-danger' , 'progress-bar' , 'progress-bar-striped' , 'progress-bar-animated');
+                bar.style.width = "10%";
+            }
+            if(r == 2){
+                $(bar).removeClass();
+                bar.classList.add('bg-primary' , 'progress-bar' , 'progress-bar-striped' , 'progress-bar-animated');
+                bar.style.width = "50%";
+            }
+            if(r == 3){
+                $(bar).removeClass();
+                bar.classList.add('bg-warning' , 'progress-bar' , 'progress-bar-striped' , 'progress-bar-animated');
+                bar.style.width = "75%";
+        
+            }
+            if(r == 4){
+                $(bar).removeClass();
+                bar.classList.add('bg-success' , 'progress-bar' , 'progress-bar-striped' , 'progress-bar-animated');
+                bar.style.width = "100%";
+        
+            }
+            }
+           </script>
+    <script>//script for eye clcik show password     border: 2px solid #cc3333;
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#f4');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+    
+});
+const togglePassword2 = document.querySelector('#togglePassword2');
+const password2 = document.querySelector('#f5');
+togglePassword2.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+    password2.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+    
+});
+const togglePassword3 = document.querySelector('#togglePassword3');
+const password3 = document.querySelector('#password');
+togglePassword3.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
+    password3.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
+    <script>
+        let bo = "1px solid #dddddd";
+document.getElementById('btn').onclick = function todo(){
+     var n = false; 
+     var yr = false;
+     var year = (document.getElementById('f2').value).split("-");
+     if(Number(year[0]) < 2011 && Number(year[0]) > 1920){
+         yr = true;
+     }
+     if( document.getElementById('f1').value.length >= 2 &&
+         document.getElementById('f3').value.length >= 4 &&
+         document.getElementById('f4').value.length >= 4){
+         n = true;
+     }
+     var nn = document.getElementById('f2').value;
+     var r = false;
+     var a = document.getElementById('f4').value;
+     var b = document.getElementById('f5').value;
+     if(document.getElementById('f4').value.length > 6 && document.getElementById('f4').value.length < 13){
+         r = true;
+     }
+     if (yr === true && user_Exist() === false && Check_Email() === true && Check_Exist() === false && a === b && n === true && r === true && pass() > 2 && radio() !== "nun"){
+         postD(this);
+     }
+     else {
+         if(user_Exist() === true){
+            document.getElementById('span').remove();
+            document.getElementById('f1').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This User Name Already Exists , Try Another one ! ';
+            $(div).insertAfter( $( "#f1" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 1){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else if(Check_Email() === false){
+            document.getElementById('span').remove();
+            document.getElementById('f3').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Wrong Email Adress , Try Another one ! ';
+            $(div).insertAfter( $( "#f3" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 3){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else if(Check_Exist() === true){
+            document.getElementById('span').remove();
+            document.getElementById('f3').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'This Email Already Exists , Try Another one ! ';
+            $(div).insertAfter( $( "#f3" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 3){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else if(r === false){
+            document.getElementById('span').remove();
+            document.getElementById('f4').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Password Must Be Between 6 - 12 Characters !  ';
+            $(div).insertAfter( $( "#f4" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 4){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else if(pass() <= 2){
+            document.getElementById('span').remove();
+            document.getElementById('f4').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'The Password Is Too weak!';
+            $(div).insertAfter( $( "#f4" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 4){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");}
+            }
+         }
+         else if(a !== b){
+            document.getElementById('span').remove();
+            document.getElementById('f5').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Try to confirm password correctly!';
+            $(div).insertAfter( $( "#f5" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 5){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else if(radio() === "nun"){
+            document.getElementById('span').remove();
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Please Choose A Gender!';
+            $(div).insertBefore( $( "#btn" ) );
+            for(let i=1; i < 6; i++){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+            }
+         }
+         else if(yr === false){
+            document.getElementById('span').remove();
+            document.getElementById('f2').style.border = "2px solid #cc3333";
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'The year must be between 1920 and 2010!';
+            $(div).insertAfter( $( "#f2" ) );
+            for(let i=1; i < 6; i++){
+                if(i !== 2){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+                }
+            }
+         }
+         else {
+            document.getElementById('span').remove();
+            const div = document.createElement('div');
+            div.classList.add('form__message' , 'form__message--error');
+            div.setAttribute("id" , "span");
+            div.style.margin = "10px 0";
+            div.innerText = 'Short One Of inputs!';
+            $(div).insertBefore( $( "#btn" ) );
+            for(let i=1; i < 6; i++){
+                    document.getElementById('f'+i).style.border = bo;
+                    document.getElementById('f'+i).setAttribute("style" , "border:1px solid #009579;");
+            }
+         }
+     }
+ }
+ </script>
+ <script>
+ 
+ 
+ function postD(val){
+          var model = {
+     "username" : document.getElementById('f1').value,
+     "age" : String(document.getElementById('f2').value),
+     "email" : document.getElementById('f3').value,
+     "password" : document.getElementById('f4').value,
+     "gender" : radio(),
+     "date" : "5"
+     };
+     console.log("post data:"+model);
+     var yt = document.getElementById("f3").value;
+             $.ajax({ 
+                 type:"POST",
+                 url : "/add",
+                 ContentType:"application/json ;charset=UTF-8",
+                 crossOrigin:true,
+                 dataType:"json",
+                 headers: {
+                     'Accept': 'application/json',
+                     'Content-Type': 'application/json'
+                     },
+                 data:this.JSON.stringify(model),
+                 success:function(data){
+                     window.localStorage.setItem('myEmail' , yt);
+                     window.location.replace('emp.html');
+                 }
+                 ,error:function(){alert("Error");}
+             });  
+         }
+ 
+      </script>
+    <script>
+      function Check_Email(){
+             var check_res;
+             var query = new Object();
+             $.ajax({ 
+                 async:false,
+                 url: "/admin/ch/email?email="+(document.getElementById("f3").value),
+                 data:query,
+                 type: "POST",
+                 dataType: "json",
+                 success: function(result){
+                     check_res=result;
+                 },error:function(){}
+             });
+             return check_res;    
+         }
+      function radio(){
+          if(document.getElementById('option-1').checked === true){
+              return "Male";
+          }
+          else if(document.getElementById('option-2').checked === true){
+              return "Female";
+          }
+          return "nun";
+      }
+      function pass(){
+          var check_res;
+          var query = new Object();
+          $.ajax({ 
+              async:false,
+              url: "/pass/ps?ps="+(document.getElementById("f4").value),
+              data:query,
+              type: "POST",
+              dataType: "json",
+              success: function(result){
+                  check_res=result;
+              },error:function(){}
+          });
+          return check_res;    
+      }
+   
+      function Check_Exist(){
+          var check_res;
+          var query = new Object();
+          $.ajax({ 
+              async:false,
+              url: "/admin/va/email?email="+(document.getElementById("f3").value),
+              data:query,
+              type: "POST",
+              dataType: "json",
+              success: function(result){
+                  check_res=result;
+              },error:function(){}
+          });
+          return check_res;    
+      }
+      
+      function user_Exist(){
+           var check_res;
+           var query = new Object();
+           $.ajax({ 
+               async:false,
+               url: "/admin/na/name?name="+(document.getElementById("f1").value),
+               data:query,
+               type: "POST",
+               dataType: "json",
+               success: function(result){
+                   check_res=result;
+               },error:function(){}
+           });
+           return check_res;    
+       }
+ </script>
+  
+</body>
+</html>

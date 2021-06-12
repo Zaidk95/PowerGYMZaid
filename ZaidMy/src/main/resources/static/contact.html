@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <script>
+var c = window.localStorage.getItem("myBat");
+if( c !== "true" ){
+	window.location.replace('index.html');
+}
+
+   </script>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Contact Us</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="images/fevicon/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="css/animate.css" />
+     <!-- my site css -->
+     
+      <link rel="stylesheet" href="./css/mystyle.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <style>
+    .btn {
+  margin: 1rem;
+}
+.btn-jittery {
+  -webkit-animation: jittery 4s infinite;
+          animation: jittery 4s infinite;
+}
+.btn-icon {
+  position: relative;
+  margin-left: 8px;
+  overflow: hidden;
+}
+.btn-icon i {
+  position: absolute;
+  top: 41%;
+  left: 48%;
+  transform: scale(0.75) translate(-16%, 400%);
+  transition: 0.2s;
+}
+.btn-icon span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.btn-icon:hover i {
+  transform: scale(0.75) translate(-16%, 0);
+}
+.btn-icon:hover span {
+  transform: translateY(-400%);
+}
+.btn-jelly:hover {
+  -webkit-animation: jelly 0.5s;
+          animation: jelly 0.5s;
+}
+.btn-fill {
+  transition: 0.3s;
+}
+.btn-fill:hover {
+  background: transparent;
+  box-shadow: inset 0 0 0 36px var(--btn-bg);
+}
+.btn-open {
+  transition: 0.3s;
+}
+.btn-open::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-bg);
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+.btn-open:hover {
+  background: transparent;
+}
+.btn-open:hover::before {
+  transform: scaleX(1);
+}
+.btn-pulse:hover {
+  box-shadow: 0 0 0 18px transparent;
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+}
+.btn-close {
+  transition: 0.3s;
+}
+.btn-close:hover {
+  background: transparent;
+  box-shadow: inset 54px 0 0 0 var(--btn-bg), inset -54px 0 0 0 var(--btn-bg);
+}
+.btn-slash {
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn-slash::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 120%;
+  height: 210%;
+  background: var(--btn-bg);
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+  transition: 0.3s;
+}
+.btn-slash:hover {
+  background: transparent;
+}
+.btn-slash:hover::before {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+}
+.btn-fill-up {
+  transition: 0.3s;
+}
+.btn-fill-up:hover {
+  background: transparent;
+  box-shadow: inset 0 -54px 0 0 var(--btn-bg);
+}
+.btn-slide {
+  transition: 0.3s;
+}
+.btn-slide:hover {
+  background: transparent;
+  box-shadow: inset 90px 0 0 0 var(--btn-bg);
+}
+.btn-through {
+  transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.btn-through::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-bg);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.btn-through:hover {
+  color: white;
+  background: transparent;
+}
+.btn-through:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.btn-offset {
+  border-radius: 0;
+  box-shadow: 6px 6px 0 0 var(--btn-bg), inset 6px 6px 0 0 var(--btn-bg);
+  transition: 0.3s;
+}
+.btn-offset:hover {
+  background: transparent;
+  box-shadow: 0 0 0 0 var(--btn-bg), inset 108px 72px 0 0 var(--btn-bg);
+}
+.btn-flip-down {
+  --flip-button-height: 40px;
+  height: var(--flip-button-height);
+  color: transparent;
+  border: none;
+  border-radius: 0;
+  perspective: 500px;
+  transition: 0.3s;
+}
+.btn-flip-down:hover {
+  color: transparent;
+  background: transparent;
+}
+.btn-flip-down .front,
+.btn-flip-down .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.btn-flip-down .front {
+  background: var(--btn-bg);
+  color: white;
+  transition: 0.3s;
+  transform-origin: center center calc(var(--flip-button-height) / -2);
+}
+.btn-flip-down .back {
+  color: white;
+  background: var(--btn-bg);
+  transform: rotateX(88deg);
+  transform-origin: center center calc(var(--flip-button-height) / -2);
+  transition: 0.3s;
+}
+.btn-flip-down:hover .front {
+  transform: rotateX(-90deg);
+}
+.btn-flip-down:hover .back {
+  transform: rotateX(0deg);
+}
+.btn-marquee {
+  font-weight: 600;
+  border: none;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn-marquee:hover {
+  transform: scale(1.1);
+}
+.btn-marquee span {
+  display: block;
+  padding: 0 20px;
+  -webkit-animation: move-left 2s linear infinite;
+          animation: move-left 2s linear infinite;
+}
+.btn-marquee span::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.btn-cross {
+  transform: rotate(0);
+  overflow: hidden;
+  transition: 0.3s;
+}
+.btn-cross::before, .btn-cross::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  background: var(--btn-bg);
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.btn-cross::before {
+  top: 0;
+  transform-origin: left;
+}
+.btn-cross::after {
+  top: 50%;
+  transform-origin: right;
+}
+.btn-cross:hover {
+  background: transparent;
+}
+.btn-cross:hover::before, .btn-cross:hover::after {
+  transform: scaleX(1);
+}
+.btn-cross:hover::before {
+  transform-origin: right;
+}
+.btn-cross:hover::after {
+  transform-origin: left;
+}
+.btn-open-line {
+  border: none;
+  transition: 0.3s;
+}
+.btn-open-line::before, .btn-open-line::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--btn-bg);
+  opacity: 0;
+  transform: scaleX(0);
+  transition: 0.4s ease-in-out;
+}
+.btn-open-line::before {
+  top: 0;
+}
+.btn-open-line::after {
+  bottom: 0;
+}
+.btn-open-line:hover {
+  letter-spacing: 5px;
+  color: var(--btn-bg);
+  background: transparent;
+}
+.btn-open-line:hover::before, .btn-open-line:hover::after {
+  opacity: 1;
+  transform: scaleX(1.2);
+}
+
+@-webkit-keyframes jittery {
+  5%, 50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+
+@keyframes jittery {
+  5%, 50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+@-webkit-keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 var(--btn-bg);
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 var(--btn-bg);
+  }
+}
+@-webkit-keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+    .bt_main{
+	background-color:	#40E0D0;
+	position:absolute;
+	right: -17%;
+	font-size: 18px;
+	color:black;
+	margin-top:20px;
+}
+.clearfix{
+	margin-top:20px!important;
+
+}
+.clearfix li{
+
+padding: 10px;
+}
+
+    form {
+  background-color: #deebdd;
+  background-image: url(
+  https://media.istockphoto.com/photos/gym-background-fitness-weight-equipment-on-empty-dark-floor-picture-id1213615970?k=6&m=1213615970&s=170667a&w=0&h=EIk-UmjkYQcnn0veHMVwGwf0_5N2UmEdhUS5XrkSocg=
+  );
+background-size:cover;
+padding: 10px;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+input,textarea{
+  width: 96%;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 124, 113, 0.932);
+  margin: 8px;
+  font-size: 30px;
+  background-color: rgb(221, 216, 216);
+background-image: linear-gradient(315deg, #cbd2dd 0%, #f5f7fa 74%);
+}
+label{
+  color:rgb(10, 42, 73);
+  font-size: 1.5em;
+  position: relative;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  left: 10px;
+  background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  padding: 2px 10px;
+  border-radius:4px;
+  
+}
+textarea{
+  height: 250px;
+  position: relative;
+  left: -2px;
+  font-size: 15px;
+}
+form button{
+  margin: 15px 15px;
+  width: 25%;
+  background-color: teal;
+  padding: 10px;
+  color:#deebdd;
+  font-weight: 800;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow:black;
+}
+
+    </style>
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+    <header class="header header_style1" style="height:170px;">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="MyWeb.html">
+                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-fitness-center-video-logo-social-media-design-template-f9566537b0445b719d2c9ae5b4264d3c_screen.jpg?ts=1589533347"
+                      style="width: 210px; height: 145px;
+                      position: relative; top: 0; object-fit: cover;"></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu"><br>
+                        <ul class="clearfix">
+                           <li><a href="MyWeb.html">Home</a></li>
+                           <li><a href="run.html" style="font-weight: 800; color:midnightblue;  text-decoration: underline!important;">Run!</a></li>
+                           <li><a href="review.html">Reviews</a></li>
+                           <li><a href="pricing.html">Payment</a></li>
+                           <li><a href="discount.html">Statistics and Discounts</a></li>
+                           <li><a href="info.html">My Account</a></li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2"><br>
+                  <div class="right_bt"><a class="bt_main" onclick="go();" href="index.html">Log Out</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+       <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2>Contact Us</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div id="sec" style="margin:30px!important;"> 
+      
+      </div>
+      <form>
+            <label for="name">Name</label>
+            <input type="text"id="name" />
+            <label for="em">Subject</label>
+            <input type="text" id="sbg" />
+            <label for="message">Massage</label><br>
+            <textarea name="" id="msg" cols="40" rows="10"></textarea>
+<button type="button" class="btn-primary btn-jittery" onclick="todo();">
+    Send
+  </button>        </form>
+         <!-- footer bottom -->
+         <div class="footer-dark" style="letter-spacing:0.9px;">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">Services</h3>
+                        <ul>
+                            <li><a href="MyWeb.html">Home</a></li>
+                            <li><a href="MyWeb.html">Best GYM</a></li>
+                            <li><a href="review.html">Rate Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">You can</h3>
+                        <ul>
+                            <li><a href="run.html">Exercise</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="pricing.html">Pay</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 style="color:white;">Why We Are The Best?</h3>
+                        <p>This is a professional website for Power GYM In Palestine, We offer A lot of services like Runing and recording hours, Enjoting and rating us, contact us for any problems you have , Use the discount that we will offer. </p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Zaid Shihadeh © 2021</p>
+            </div>
+       </footer>
+       </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+      </footer>
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/wow.js"></script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+      <script>
+      
+    	  const msg = document.getElementById('sec');
+    	 
+      
+      function todo(){
+    		if(document.getElementById('name').value.length >= 2 && document.getElementById('sbg').value.length >= 2
+    		&& document.getElementById('msg').value.length >= 5){
+    			postRate(this);
+    			 msg.innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+		    	  <strong>Your Massage Has Been Sent Succefully!</strong> Thanks for reaching to us , You will get a respone on your E-mail Adress within 2-24 Hours.
+		    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    	    <span aria-hidden="true">&times;</span>
+		    	  </button>
+		    	</div>`;
+		    	document.getElementById('name').value = "";
+		    	document.getElementById('sbg').value = "";
+		    	document.getElementById('msg').value = "";
+
+    		}
+    		else{
+    			if(document.getElementById('name').value.length < 3){
+    				msg.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		    	  Enter A Good Name , Too Short !
+		    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    	    <span aria-hidden="true">&times;</span>
+		    	  </button>
+		    	</div>`;
+    			}
+    			else if((document.getElementById('sbg').value.length < 3)){
+    				msg.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    				Enter A Good Subject , Too Short !
+  		    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  		    	    <span aria-hidden="true">&times;</span>
+  		    	  </button>
+  		    	</div>`;
+    			}
+    			else{
+    				msg.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    				Enter A Good Massage , Too Short !  		    	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  		    	    <span aria-hidden="true">&times;</span>
+  		    	  </button>
+  		    	</div>`;
+    			}
+
+    		}
+    	}
+      function postRate(val){
+          var model = {
+        	"email": window.localStorage.getItem("myEml"),
+        	"name": document.getElementById("name").value,
+        	"subject" : document.getElementById("sbg").value,
+        	"msg" : document.getElementById("msg").value
+    	};
+    	console.log("post data:"+model);
+     	    $.ajax({ 
+     	    	type:"POST",
+     			url : "/msg/add",
+     			ContentType:"application/json ;charset=UTF-8",
+     			crossOrigin:true,
+     			dataType:"json",
+     			headers: {
+     				'Accept': 'application/json',
+     				'Content-Type': 'application/json'
+     				},
+     			data:this.JSON.stringify(model),
+     			success:function(data){
+     			}
+     			,error:function(){alert("Error");}
+     	    });  
+    		}     
+       var c = window.localStorage.getItem("myBat");
+       if( c !== "true" ){
+       	window.location.replace('index.html');
+       }
+      function go(){
+    		window.localStorage.clear();
+    		window.localStorage.setItem('myBat', null);
+    		window.location.replace('index.html');
+    	}
+      
+      </script>
+   </body>
+</html>

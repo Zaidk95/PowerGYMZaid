@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <script>
+var c = window.localStorage.getItem("myBat");
+if( c !== "true" ){
+	window.location.replace('index.html');
+}
+
+   </script>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Customer Reviews</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="icon" href="images/fevicon/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="css/animate.css" />
+     <!-- my site css -->
+      <link rel="stylesheet" href="./css/mystyle.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1" style="height:170px;">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="MyWeb.html">
+                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-fitness-center-video-logo-social-media-design-template-f9566537b0445b719d2c9ae5b4264d3c_screen.jpg?ts=1589533347"
+                      style="width: 210px; height: 145px;
+                      position: relative; top: 0; object-fit: cover;"></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu"><br>
+                        <ul class="clearfix">
+                           <li><a href="MyWeb.html">Home</a></li>
+                           <li><a href="run.html">Run!</a></li>
+                           <li><a href="review.html" style="font-weight: 800;  color:midnightblue;  text-decoration: underline!important;">Reviews</a></li>
+                           <li><a href="pricing.html">Payment</a></li>
+                          <li><a href="discount.html">Statistics and Discounts</a></li>
+                           <li><a href="info.html">My Account</a></li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2"><br>
+                  <div class="right_bt"><a class="bt_main" onclick="go();" href="index.html">Log Out</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2>Reviews</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section Beloww -->
+<div class="button_container">
+	<button class="btn"><span><a href="addReview.html" style="color:white;">Add A Review Here</a></span></button>
+</div>
+<div class="button_container" style="margin-top:110px;">
+	<button class="btn" id="btn1"><span><a href="myReview.html" style="color:white;">My Reviews</a></span></button>
+</div>
+<div class="rat1" style="font-family: 'Lobster', cursive!important;">
+<span id="rat" class="gg" style="font-size:110px;font-family: 'Lobster', cursive!important;"></span>
+<span style="font-size:500%;color:blue; font-family: 'Lobster', cursive!important;">&bigstar;</span>
+<h2 id="rat2" style="font-family: 'Lobster', cursive!important;"></h2>
+</div>
+<br><br>
+<div id="sec" style="text-transform:capitalize;">
+
+</div>
+      <!-- All Code Above -->
+     
+      <!-- end section -->
+      <!-- footer -->
+      <br><br>
+       <div class="footer-dark" style="letter-spacing:0.9px;">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">Services</h3>
+                        <ul>
+                            <li><a href="MyWeb.html">Home</a></li>
+                            <li><a href="MyWeb.html">Best GYM</a></li>
+                            <li><a href="review.html">Rate Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">You can</h3>
+                        <ul>
+                            <li><a href="run.html">Exercise</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="pricing.html">Pay</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 style="color:white;">Why We Are The Best?</h3>
+                        <p>This is a professional website for Power GYM In Palestine, We offer A lot of services like Runing and recording hours, Enjoting and rating us, contact us for any problems you have , Use the discount that we will offer. </p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Zaid Shihadeh © 2021</p>
+            </div>
+       </footer>
+       </div>
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+     
+      <!-- end google map js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+       <script>
+       function Allrevs(){
+   	    var check_res;
+   	    var query = new Object();
+   	    $.ajax({ 
+   	        async:false,
+   	        url:"/admin/ch/rate",
+   	        data:query,
+   	        type: "POST",
+   	        success: function(result){
+   	        	check_res=result;
+   	        },error:function(){
+}
+   	    });
+   	    return check_res;    
+   	}
+       var all = Allrevs();
+       let rating = all.split("TTh54sum");
+       document.getElementById("rat").innerHTML= Number(rating[1]).toFixed(2);
+       document.getElementById("rat2").innerHTML= `<span style="font-family: 'Lobster', cursive!important;color:green; font-size:90px;">${Number(rating[2])}</span> Reviews`;
+       var arr = all.split("newrr");
+	   const big = document.getElementById("sec");
+       for(let i=0 ; i < arr.length; i++){
+     	  const y = arr[i].split("newtr");
+     	 //document.write(`<div class="wow2345" style="word-wrap: break-word;">`);
+     	 const mydiv = document.createElement("div");
+     	 mydiv.classList.add("wow2345","gradient-border");
+     	  for(let j=0; j < y.length; j++){
+     		  if(j==0){
+     			 const fe = document.createElement("h3");
+     			fe.classList.add("h12");
+    			 fe.innerHTML = "<span style=\"color:chocolate\"> From </span>"+y[j];
+        		 mydiv.append(fe);
+     		  }
+     		  if(j==1){
+     			 const fe = document.createElement("div");
+     			 fe.classList.add("hello1");
+     			 if(y[j] == 1){
+     			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+     			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+     			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+     			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+     			 `;
+     			 }
+     			if(y[j] == 2){
+        			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+        			<span class="yel">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			 `;
+        			 }
+     			if(y[j] == 3){
+        			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+        			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			 `;
+        			 }
+     			if(y[j] == 4){
+        			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+        			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			 `;
+        			 }
+     			if(y[j] == 5){
+        			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+        			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+        			<span class="yel">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+        			 `;
+        			 }
+     			if(y[j] == 6){
+       			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+       			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+       			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="bl">&starf;</span>
+       			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+       			 `;
+       			 }
+     			if(y[j] == 7){
+          			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+          			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+          			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+          			<span class="bl">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+          			 `;
+          			 }
+     			if(y[j] == 8){
+          			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+          			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+          			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+          			<span class="yel">&starf;</span><span class="bl">&starf;</span><span class="bl">&starf;</span>
+          			 `;
+          			 }
+     			if(y[j] == 9){
+         			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="bl">&starf;</span>
+         			 `;
+         			 }
+     			if(y[j] == 10){
+         			 fe.innerHTML= `<h3 style="color:#4000ff;">Rate : ${y[j]} /10</h3><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+         			<span class="yel">&starf;</span><span class="yel">&starf;</span><span class="yel">&starf;</span>
+         			 `;
+         			 }
+        		 mydiv.append(fe);
+     		  }
+     		 if(j==2){
+     			const fe = document.createElement("h3");
+   			 fe.innerHTML = "<span style=\"color:crimson\">Title</span> : "+y[j];
+       		 mydiv.append(fe);
+    		  }
+     		if(j==3){
+     			const fe = document.createElement("h3");
+   			 fe.innerHTML = "<span style=\"color:green\">Description</span> : "+y[j];
+       		 mydiv.append(fe);
+  		  }
+     		  if(j==4){
+     			 const fe = document.createElement("h3");
+    			 fe.innerHTML = "<span style=\"color:midnightblue\">Published</span> : "+y[j];
+        		 mydiv.append(fe);
+     		  }
+     	  }
+     	  big.prepend(mydiv);
+       }
+  
+      function go(){
+    		window.localStorage.clear();
+    		window.localStorage.setItem('myBat', null);
+    		window.location.replace('index.html');
+    	}
+      
+      </script>
+   </body>
+</html>

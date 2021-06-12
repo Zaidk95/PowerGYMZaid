@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <script>
+var c = window.localStorage.getItem("myBat");
+if( c !== "true" ){
+	window.location.replace('index.html');
+}
+
+   </script>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Statistics and Discounts</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="images/fevicon/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="css/animate.css" />
+     <!-- my site css -->
+      <link rel="stylesheet" href="./css/mystyle.css">
+      <style>
+      section{padding:5% 0}
+.alizarin{background:#e74c3c}
+.amethyst{background:#9b59b6}
+.emerald{background:#2ecc71}
+.midnight-blue{background:#2c3e50}
+.peter-river{background:#3498db}
+.dl{background:#f0f0f0;padding:30px 0;border-radius:20px;position:relative}
+.dl:before{content:" ";height:20px;width:20px;background:#ddd;border-radius:20px;position:absolute;left:50%;top:20px;margin-left:-10px}
+.dl .brand{text-transform:uppercase;letter-spacing:3px;padding:10px 15px;margin-top:10px;text-align:center;min-height:100px}
+.dl .discount{min-height:50px;position:relative;font-size:80px;line-height:80px;text-align:center;font-weight:700;padding:20px 15px 0;color:#f1c40f}
+.dl .discount:after{content:" ";border-right:20px solid transparent;border-left:20px solid transparent;position:absolute;bottom:-20px;left:20%}
+.dl .discount.alizarin:after{border-top:20px solid #e74c3c}
+.dl .discount.peter-river:after{border-top:20px solid #3498db}
+.dl .discount.emerald:after{border-top:20px solid #2ecc71}
+.dl .discount.amethyst:after{border-top:20px solid #9b59b6}
+.dl .discount .type{font-size:20px;letter-spacing:1px;text-transform:uppercase;margin-top:-30px}
+.dl .descr{color:#999;margin-top:10px;padding:20px 15px}
+.dl .ends{padding:0 15px;color:#f1c40f;margin-bottom:10px}
+.dl .coupon{min-height:50px;text-align:center;text-transform:uppercase;font-weight:700;font-size:18px;padding:20px 15px}
+.dl .coupon a.open-code{color:#16a085}
+.dl .coupon .code{letter-spacing:1px;border-radius:4px;margin-top:10px;padding:10px 15px;color:#f1c40f;background:#f0f0f0}
+      </style>
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1" style="height:170px;">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="MyWeb.html">
+                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-fitness-center-video-logo-social-media-design-template-f9566537b0445b719d2c9ae5b4264d3c_screen.jpg?ts=1589533347"
+                      style="width: 210px; height: 145px;
+                      position: relative; top: 0; object-fit: cover;"></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu"><br>
+                        <ul class="clearfix">
+                           <li><a href="MyWeb.html">Home</a></li>
+                           <li><a href="run.html">Run!</a></li>
+                           <li><a href="review.html">Reviews</a></li>
+                           <li><a href="pricing.html">Payment</a></li>
+                           <li><a href="discount.html" style="font-weight: 800; color:midnightblue;  text-decoration: underline!important;">Statistics and Discounts</a></li>
+                           <li><a href="info.html">My Account</a></li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2"><br>
+                  <div class="right_bt"><a class="bt_main" onclick="go();" href="index.html">Log Out</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="
+                            position: absolute;
+    top: -1rem;
+    left: -9rem;
+                        ">Statistics & Discounts</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section -->
+
+<div id="piechart" style="margin-left:26rem;margin-top: -8rem;"></div>
+
+<section id="labels">
+  <div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="dl">
+            <div class="brand">
+                <h2>mango</h2>
+            </div>
+            <div class="discount alizarin">30%
+                <div class="type">off</div>
+            </div>
+            <div class="descr">
+                <strong>Mei mucius gloriatur reprimique mollis*.</strong> 
+                Ad sonet perfecto antiopam mei, denique molestie ne has. 
+            </div>
+            <div class="ends">
+                <small>* Conditions and restrictions apply.</small>
+            </div>
+            <div class="coupon midnight-blue">
+                <a data-toggle="collapse" href="#code-1" class="open-code">Get a code</a>
+                <div id="code-1" class="collapse code">LV5MAY14</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div  class="dl">
+            <div class="brand">
+                <h2>lacoste</h2>
+            </div>
+            <div class="discount emerald">
+                50%
+                <div class="type">
+                    off
+                </div>
+            </div>
+            <div class="descr">
+                <strong>
+                    If Are a new customer 
+                </strong> 
+                we will give a coupoun with 50% for your first payment.
+            </div>
+           
+            <div class="coupon midnight-blue">
+                <a data-toggle="collapse" href="#code-2" class="open-code">Get a code</a>
+                <div id="code-2" class="collapse in code">
+                    MNO123ST
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div  class="dl">
+            <div class="brand">
+                <h2>
+                    Puma
+                </h2>
+            </div>
+            <div class="discount peter-river">
+            15%
+                <div class="type">
+                    off
+                </div>
+            </div>
+            <div class="descr">
+                <strong>
+                     Solet consul tractatos ei pro*. 
+                </strong> 
+                Ei mei quot invidunt explicari, placerat percipitur intellegam.
+            </div>
+            <div class="ends">
+                <small>
+                   * Conditions and restrictions apply.
+                </small>
+            </div>
+            <div class="coupon midnight-blue">
+                <a data-toggle="collapse" href="#code-3" class="open-code">Get a code</a>
+                <div id="code-3" class="collapse code">
+                    OLV4SY3R
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div  class="dl">
+            <div class="brand">
+                <h2>
+                    adidas
+                </h2>
+            </div>
+            <div class="discount amethyst">
+                25%
+                <div class="type">
+                    off
+                </div>
+            </div>
+            <div class="descr">
+                <strong>
+                    Cu aliquip persius alterum duo*. 
+                </strong> 
+                Possit equidem disputando usu et, sea invidunt scriptorem in. 
+            </div>
+            <div class="ends">
+                <small>
+                   * Conditions and restrictions apply.
+                </small>
+            </div>
+            <div class="coupon midnight-blue">
+                <a data-toggle="collapse" href="#code-4" class="open-code">Get a code</a>
+                <div id="code-4" class="collapse code">
+                    ZUY4OPLQ
+                </div>
+            </div>
+          </div>
+        </div>
+	</div>
+  </div>
+</section>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+function get(){
+      	    var check_res;
+      	    var query = new Object();
+      	    $.ajax({ 
+      	        async:false,
+      	        url:"/getmf",
+      	        data:query,
+      	        type: "POST",
+      	        success: function(result){
+      	        	check_res=result;
+      	        },error:function(){
+   }
+      	    });
+      	    return check_res;    
+      	}
+      	
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+	
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Male And Female Percantge'],
+  ['Male', Number(get().split("kk")[0])],
+  ['Female', Number(get().split("kk")[1])],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Male And Female Percantge', 'width':1000, 'height':700};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/wow.js"></script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+      <script>
+      var c = window.localStorage.getItem("myBat");
+      if( c !== "true" ){
+      	window.location.replace('index.html');
+      }
+
+      function go(){
+    		window.localStorage.clear();
+    		window.localStorage.setItem('myBat', null);
+    		window.location.replace('index.html');
+    	}
+      </script>
+   </body>
+</html>

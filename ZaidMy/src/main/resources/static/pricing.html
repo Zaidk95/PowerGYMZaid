@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <script>
+var c = window.localStorage.getItem("myBat");
+if( c !== "true" ){
+	window.location.replace('index.html');
+}
+
+   </script>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Payment Page</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="images/fevicon/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="css/animate.css" />
+     <!-- my site css -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="./css/mystyle.css">
+      <style>
+  .draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+.btn3 {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight:700;
+  padding: 1em 2em;
+  letter-spacing: 0.1rem;
+    display:block;
+  margin: 0 auto;
+}
+.btn3:focus {
+  outline: 2px dotted #55d7dc;
+}
+.bt1{
+cursor:pointer;
+color:midnightblue!important;
+}
+.bt1:hover{
+backgound-color:black;
+color:aqua!important;
+}
+      </style>
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1" style="height:170px;">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="MyWeb.html">
+                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-fitness-center-video-logo-social-media-design-template-f9566537b0445b719d2c9ae5b4264d3c_screen.jpg?ts=1589533347"
+                      style="width: 210px; height: 145px;
+                      position: relative; top: 0; object-fit: cover;"></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu"><br>
+                        <ul class="clearfix">
+                           <li><a href="MyWeb.html">Home</a></li>
+                           <li><a href="run.html">Run!</a></li>
+                           <li><a href="review.html">Reviews</a></li>
+                           <li><a href="pricing.html" style="font-weight: 800; color:midnightblue;  text-decoration: underline!important;
+                           ">Payment</a></li>
+                          <li><a href="discount.html">Statistics and Discounts</a></li>
+                           <li><a href="info.html">My Account</a></li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2"><br>
+                  <div class="right_bt"><a class="bt_main" onclick="go();" href="index.html">Log Out</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2>Pricing</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section -->
+      <section class="layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="full">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <div class="full text_align_center">
+                           <div class="heading_main center_head_border heading_style_1">
+                              <h2>GYM prices</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full" style="margin-top:10px;">
+                     <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                           <div class="table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Basic</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$99.99<br>
+                                       <small>/ 1 month</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                    	<li>A bus that takes you from your home</li>
+                                       <li>Access to all equipment and machines</li>
+                                       <li>Free Proteins inside our GYM</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="bt_main bt1" onclick="b1();" style="right: 8rem;">Buy now</a> </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                           <div class="active_price table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Standard</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$149.99<br>
+                                       <small>/ 2 months</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                     <ul>
+                                    	<li>A bus that takes you from your home</li>
+                                       <li>Access to all equipment and machines</li>
+                                       <li>Free Proteins inside our GYM</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="reverse_bt bt_main bt1" onclick="b2();" style="right: 8rem;">Buy now</a> </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                           <div class="table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Profesional</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$199.99<br>
+                                       <small>/ 3 months</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                    	<li>A bus that takes you from your home</li>
+                                       <li>Access to all equipment and machines</li>
+                                       <li>Free Proteins inside our GYM</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="bt_main bt1" onclick="b3();" style="right: 8rem;">Buy now</a> </div>
+                           </div>
+                        </div><br>
+                        <div class="col-sm-12 col-md-4" style="margin: 0 auto;margin-left: 25rem;">
+                           <div class="table_price text_align_center" style="width:28rem;">
+                              <div class="table_price_head">
+                                 <h5>basic (Without Subscription)</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p id="price">$199.99<br>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                    	<li>A bus that takes you from your home</li>
+                                       <li>Access to all equipment and machines</li>
+                                       <li>Free Proteins inside our GYM</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="bt_main bt1" onclick="b4();" style="
+                              cursor:pointer;color:midnightblue;position:absolute;
+                              right:6rem;">Pay Now</a> </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+     <button class="btn3 draw-border" style="cursor:auto;">Go and pay and support us , you will be so happy with our service !</button>
+      <br><br>
+       <div class="footer-dark" style="letter-spacing:0.9px;">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">Services</h3>
+                        <ul>
+                            <li><a href="MyWeb.html">Home</a></li>
+                            <li><a href="MyWeb.html">Best GYM</a></li>
+                            <li><a href="review.html">Rate Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="color:white;">You can</h3>
+                        <ul>
+                            <li><a href="run.html">Exercise</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="pricing.html">Pay</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 style="color:white;">Why We Are The Best?</h3>
+                        <p>This is a professional website for Power GYM In Palestine, We offer A lot of services like Runing and recording hours, Enjoting and rating us, contact us for any problems you have , Use the discount that we will offer. </p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Zaid Shihadeh © 2021</p>
+            </div>
+       </footer>
+       </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/wow.js"></script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+      <script>
+      window.localStorage.removeItem('myP1');
+      function Alltime(){
+    	    var check_res;
+    	    var query = new Object();
+    	    $.ajax({ 
+    	        async:false,
+    	        url:"/getimes/nm?nm="+(window.localStorage.getItem('myUsr')),
+    	        data:query,
+    	        type: "get",
+    	        success: function(result){
+    	        	check_res=result;
+    	        },error:function(){
+ }
+    	    });
+    	    return check_res;    
+    	}
+	 	let total = Alltime().split("wowww")[1];
+		document.getElementById('price').innerHTML = "$"+Number(total).toFixed(2);
+      function go(){
+    		window.localStorage.clear();
+    		window.localStorage.setItem('myBat', null);
+    		window.location.replace('index.html');
+    	}
+      function b1(){
+       	  window.localStorage.setItem('myP1' , '99.99');
+       	window.location.replace('pay.html');
+      }
+      function b2(){
+       	  window.localStorage.setItem('myP1' , '149.99');
+       	window.location.replace('pay.html');
+      }
+      function b3(){
+       	  window.localStorage.setItem('myP1' , '199.99');
+       	window.location.replace('pay.html');
+      }
+      function b4(){
+       	  window.localStorage.setItem('myP1' , Number(total).toFixed(2));
+       	window.location.replace('pay.html');
+      }
+      </script>
+   </body>
+</html>

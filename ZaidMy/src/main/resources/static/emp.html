@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+function getone(){
+	var check_res;
+    var query = new Object();
+    var x = window.localStorage.getItem('myEmail');
+    $.ajax({ 
+        async:false,
+        url:"/getide/em?em="+x,
+        data:query,
+        type: "POST",
+        dataType: "json",
+        success: function(result){
+            check_res=result;
+        },error:function(){}
+    });
+    return check_res;  
+}
+window.localStorage.setItem("myCat", getone());
+window.localStorage.setItem("myBat", "true");
+window.location.replace('MyWeb.html'); 
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+</body>
+</html>
